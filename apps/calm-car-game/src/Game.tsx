@@ -132,7 +132,7 @@ export default function Game() {
                     width: '100%',
                     display: 'flex',
                     justifyContent: 'center',
-                    gap: 20
+                    gap: 200
                 }}
                 >
                 <button
@@ -163,7 +163,7 @@ export default function Game() {
                     ➡️
                 </button>
 
-                <button
+                {/* <button
                     onClick={() => hornAudio.play()}
                     style={{
                         fontSize: 40,
@@ -171,8 +171,8 @@ export default function Game() {
                         borderRadius: 20
                     }}
                 >
-                🔊
-            </button>
+                    🔊
+                </button> */}
             </div>
 
             
