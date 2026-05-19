@@ -9,7 +9,7 @@ export default function Game() {
     right: false
   });
 
-  const hornAudio = new Audio('/horn.wav');
+//   const hornAudio = new Audio('/horn.wav');
 
   useEffect(() => {
     const canvas = canvasRef.current!;
