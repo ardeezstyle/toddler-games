@@ -1,73 +1,103 @@
-# React + TypeScript + Vite
+# Calm Car Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, playful car game designed for young children. The application provides a calm, distraction-free experience where children can explore and interact with cars through an intuitive interface.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Calm Car Game is designed around simple interactions and a child-friendly visual experience.
 
-## React Compiler
+The application aims to provide:
+- A simple and intuitive interface suitable for young children.
+- Large, easy-to-use touch interactions.
+- A playful car-themed experience.
+- A calm environment without unnecessary distractions.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the ESLint configuration
+- **React** – UI components and application structure.
+- **TypeScript** – Type safety.
+- **Vite** – Development server and production builds.
+- **CSS** – Styling and responsive layouts.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js
+- Yarn Classic (1.x)
+- Git
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Install dependencies
+
+Run this from the repository root:
+
+```bash
+yarn install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Start the development server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Run this from the repository root:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+yarn workspace calm-car-game dev
 ```
+
+The development server is configured to use `--host 0.0.0.0`, allowing access from other devices on the same Wi-Fi network.
+
+For instructions on accessing the game on a tablet, see [Local Development and Tablet Testing](../../docs/local-development.md).
+
+## Build and validation
+
+### Run lint
+
+```bash
+yarn workspace calm-car-game lint
+```
+
+### Build for production
+
+```bash
+yarn workspace calm-car-game build
+```
+
+The production build is generated in:
+
+```text
+apps/calm-car-game/dist/
+```
+
+### Preview the production build
+
+```bash
+yarn workspace calm-car-game preview
+```
+
+## Deployment
+
+Calm Car Game is published using [Netlify](https://www.netlify.com/) and connected to the GitHub repository.
+
+Published application:
+
+[https://swarup-car-game.netlify.app](https://swarup-car-game.netlify.app)
+
+Changes pushed to the configured GitHub deployment branch can trigger an automatic Netlify build and deployment.
+
+For deployment configuration and instructions, see [GitHub and Netlify Deployment](../../docs/netlify-deployment.md).
+
+## Project structure
+
+```text
+apps/calm-car-game/
+├── public/
+├── src/
+├── index.html
+├── package.json
+└── README.md
+```
+
+This is a high-level overview; the source structure may evolve as the application grows.
+
+---
+
+**Calm Car Game** — A little space for playful exploration.

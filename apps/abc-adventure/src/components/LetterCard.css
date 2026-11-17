@@ -1,0 +1,248 @@
+
+.letter-card {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 28px;
+    background: var(--color-white);
+    border-radius: 28px;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  
+  /* Card header */
+  
+  .letter-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .letter-card__eyebrow {
+    color: #e49b32;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+  }
+  
+  .letter-card__counter {
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  
+  /* Letter display */
+  
+  .letter-card__letter {
+    padding: 28px 20px;
+    background: #fff3dc;
+    border-radius: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .letter-card__characters {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 20px;
+    color: #e99c32;
+    font-size: clamp(5rem, 15vw, 8rem);
+    font-weight: 900;
+    line-height: 1;
+  }
+  
+  .letter-card__characters span:last-child {
+    color: #f2b95f;
+    font-size: 0.75em;
+  }
+  
+  .letter-card__phonetic {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+  
+  /* Sound buttons */
+  
+  .sound-button {
+    min-height: 44px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #9a681c;
+    font-size: 0.95rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition:
+      transform 180ms ease,
+      box-shadow 180ms ease;
+    box-shadow: 0 3px 10px rgba(52, 64, 84, 0.08);
+  }
+  
+  .sound-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(52, 64, 84, 0.12);
+  }
+  
+  .sound-button:active {
+    transform: scale(0.97);
+  }
+  
+  /* Primary word */
+  
+  .letter-card__primary-word {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+  }
+  
+  .letter-card__primary-image {
+    width: min(100%, 240px);
+    aspect-ratio: 1 / 1;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 28px;
+    background: #fff0ee;
+  }
+  
+  .letter-card__primary-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .letter-card__primary-image span {
+    font-size: 8rem;
+  }
+  
+  .letter-card__primary-word h2 {
+    margin: 0;
+    color: var(--color-text);
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: 900;
+  }
+  
+  /* Supporting words */
+  
+  .letter-card__more-words {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .letter-card__more-words h3 {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-align: center;
+  }
+  
+  .letter-card__word-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+  
+  .letter-card__word {
+    min-width: 0;
+    padding: 12px 8px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background: #f5f8ff;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    transition:
+      transform 180ms ease,
+      border-color 180ms ease;
+  }
+  
+  .letter-card__word:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-sky);
+  }
+  
+  .letter-card__word:active {
+    transform: scale(0.97);
+  }
+  
+  .letter-card__word-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #ffffff;
+  }
+  
+  .letter-card__word-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .letter-card__word-image span {
+    font-size: 3rem;
+  }
+  
+  .letter-card__word > span:nth-child(2) {
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+  }
+  
+  .letter-card__word-sound {
+    font-size: 0.8rem;
+  }
+  
+  /* Responsive layout */
+  
+  @media (max-width: 600px) {
+    .letter-card {
+      padding: 18px;
+      gap: 22px;
+      border-radius: 22px;
+    }
+  
+    .letter-card__letter {
+      padding: 24px 14px;
+    }
+  
+    .letter-card__word-grid {
+      gap: 8px;
+    }
+  
+    .letter-card__word {
+      padding: 8px 5px;
+      border-radius: 16px;
+    }
+  
+    .letter-card__word > span:nth-child(2) {
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .sound-button,
+    .letter-card__word {
+      transition: none;
+    }
+  }
+  

@@ -1,0 +1,117 @@
+
+.letter-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: 760px;
+    margin: 24px auto 0;
+  }
+  
+  .letter-navigation__button,
+  .letter-navigation__home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 64px;
+    padding: 10px 18px;
+    border: 2px solid #edf0f5;
+    border-radius: 18px;
+    color: var(--color-text);
+    background: white;
+    text-decoration: none;
+    transition: transform 160ms ease, border-color 160ms ease;
+  }
+  
+  .letter-navigation__button {
+    flex: 1;
+    justify-content: flex-start;
+  }
+  
+  .letter-navigation__button--next {
+    justify-content: flex-end;
+  }
+  
+  .letter-navigation__button > span:first-child,
+  .letter-navigation__button > span:last-child {
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  
+  .letter-navigation__label {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .letter-navigation__label small {
+    color: var(--color-text-muted);
+    font-size: 0.7rem;
+  }
+  
+  .letter-navigation__label strong {
+    font-size: 1.1rem;
+  }
+  
+  .letter-navigation__home {
+    flex-direction: column;
+    gap: 0;
+    min-width: 90px;
+    font-size: 0.8rem;
+    font-weight: 800;
+  }
+  
+  .letter-navigation__home > span:first-child {
+    font-size: 1.4rem;
+  }
+  
+  .letter-navigation__button:hover,
+  .letter-navigation__home:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-primary);
+  }
+  
+  .letter-navigation a:focus-visible {
+    outline: 3px solid var(--color-sky);
+    outline-offset: 3px;
+  }
+  
+  @media (max-width: 420px) {
+    .letter-navigation {
+      gap: 6px;
+    }
+  
+    .letter-navigation__button,
+    .letter-navigation__home {
+      min-height: 58px;
+      padding: 8px;
+    }
+  
+    .letter-navigation__home {
+      min-width: 68px;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .letter-navigation__button,
+    .letter-navigation__home {
+      transition: none;
+    }
+  }
+  
+
+
+.letter-navigation__button--disabled {
+    color: #b8bec9;
+    background: #f5f6f8;
+    border-color: #edf0f5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  .letter-navigation__button--disabled .letter-navigation__label small {
+    color: #b8bec9;
+  }
+  
