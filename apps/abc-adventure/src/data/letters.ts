@@ -273,7 +273,7 @@ export interface LetterWord {
         { word: 'X-ray', image: '/images/letters/x-ray.webp' },
         { word: 'Xylophone', image: '/images/letters/xylophone.webp' },
         { word: 'Xmas tree', image: '/images/letters/xmas-tree.webp' },
-        { word: 'Xolo dog', image: '/images/letters/xolo-dog.webp' },
+        { word: 'Xerox machine', image: '/images/letters/xerox-machine.webp' },
       ],
     },
     {
@@ -284,7 +284,7 @@ export interface LetterWord {
         { word: 'Yo-yo', image: '/images/letters/yo-yo.webp' },
         { word: 'Yak', image: '/images/letters/yak.webp' },
         { word: 'Yacht', image: '/images/letters/yacht.webp' },
-        { word: 'Yarn', image: '/images/letters/yarn.webp' },
+        { word: 'Yoga', image: '/images/letters/yoga.webp' },
       ],
     },
     {
