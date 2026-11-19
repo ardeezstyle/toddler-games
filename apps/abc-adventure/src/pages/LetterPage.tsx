@@ -36,7 +36,7 @@ function LetterPage() {
     <main className="app">
       <header className="app-header">
         <Link className="app-brand" to="/" aria-label="ABC Adventure home">
-          <span className="app-brand__icon" aria-hidden="true">🌈</span>
+          <img src="/icons/icon-192.png" alt="ABC Adventure" className="app-logo" />
           <span>ABC Adventure</span>
         </Link>
 

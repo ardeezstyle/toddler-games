@@ -60,3 +60,10 @@
     }
   }
   
+  .app-logo {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
